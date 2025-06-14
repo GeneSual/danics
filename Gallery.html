@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Memories</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4d6d;
+      margin-top: 40px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      font-size: 18px;
+      color: #ff4d6d;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay muted loop>
+    <source src="music/ForHer.mp3" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+  </audio>
+
+  <h1>Our Memories Together 💖</h1>
+
+  <!-- Simplified Gallery -->
+  <div class="gallery" id="gallery"></div>
+
+  <a href="index.html" class="back-button">← Back to Main Page</a>
+
+  <!-- Scripts -->
+  <script>
+    // Generate gallery images dynamically
+    const gallery = document.getElementById("gallery");
+    for (let i = 1; i <= 80; i++) {
+      const img = document.createElement("img");
+      img.src = `images/${i}.jpg`;
+      img.alt = `Memory ${i}`;
+      gallery.appendChild(img);
+    }
+
+    // Background music logic
+    const music = document.getElementById("bg-music");
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTime = localStorage.getItem("musicTime");
+      if (savedTime) music.currentTime = parseFloat(savedTime);
+      music.play().then(() => {
+        music.muted = false;
+      }).catch(() => {
+        document.addEventListener("click", () => {
+          music.muted = false;
+          music.play();
+        }, { once: true });
+      });
+    });
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("musicTime", music.currentTime);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Monthsary, My Love 💖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffebf2;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      max-width: 90%;
+      width: 700px;
+      margin: 120px auto 60px;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #ff4d6d;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+      color: #333;
+    }
+
+    .heart {
+      font-size: 3rem;
+      color: #ff4d6d;
+      text-align: center;
+      margin-top: 30px;
+      animation: heartbeat 1.5s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .heart:hover {
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .falling-heart {
+      position: fixed;
+      top: -50px;
+      color: #ff4d6d;
+      animation: fall linear infinite;
+      font-size: 24px;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .typewriter {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      text-align: center;
+      color: #ff4d6d;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff4d6d;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+      margin: 50px auto 20px;
+      max-width: 90%;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      .typewriter {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay muted loop>
+    <source src="music/ForHer.mp3" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Typewriter Intro -->
+  <div class="typewriter">Happy 4th Monthsary, my Love!</div>
+
+  <!-- Main Message Card -->
+  <div class="card">
+    <h1>For My Precious Baby ❤️</h1>
+    <section>
+
+  <p>
+    I still can’t believe it’s already been four months since we officially became "us." Time flies when I’m with you — every moment is filled with memories I’ll forever treasure: the unforgettable awayan, the jokes (katawanan or dili), the happy moments, the *pacute-pacute*, the *bembangan* hehehe, and all the little things that make “us” so special.
+  </p>
+  <p>
+    Even the tampuhan and *kulitan* have a place in my heart — they’re part of our love story. I wouldn’t trade any of it. Everything we’ve been through shows how real and strong our love is.
+  </p>
+  <p>
+    From our chats, late-night tawagan, and random “I miss you” messages, to the big things like comforting each other in hard times — you’ve become my constant, my peace, and my favorite person in the whole world.
+  </p>
+  <p>
+    You’re my safe space, my *pahinga*, and my biggest inspiration. In just four months, you’ve shown me what true love is. You’re the most beautiful, caring, and amazing girlfriend anyone could ever ask for — and I’m beyond proud and grateful to call you mine.
+  </p>
+  <p>
+    Thank you for your patience when I’m being kulit (or when *kuliton tika* hehe), for understanding me even when I can’t explain myself, and for loving me unconditionally — even on the days I feel unlovable. Thank you for never giving up on us, and for giving our love another chance. *Luvieeee mwa mwa mwa!*
+  </p>
+  <p>
+    You bring out the best in me and make me want to grow — not just for myself, but for you, for us. Your love makes my world brighter and my heart so much fuller.
+  </p>
+  <p>
+    Four months down — and I know this is just the beginning. We don’t know exactly what lies ahead, but I’m sure there’s more: more monthsaries, more kulitan, more dates, more “laban lang” moments, more late-night calls, more *aways*, deeper connection, and dreams fulfilled together.
+  </p>
+  <p>
+    No matter what happens, no matter how hard life gets, I’ll always be right here — holding your hand and choosing you every single day.
+  </p>
+  <p>
+    I love you endlessly, deeply, and truthfully. Happy 4th Monthsary, my heart, my love, my everything. ❤️
+  </p>
+
+    </section>
+
+    <!-- Heart Redirect to Gallery -->
+    <a href="gallery.html" aria-label="Go to our gallery">
+      <div class="heart" title="Click to view our gallery ❤️">❤️</div>
+    </a>
+  </div>
+
+  <!-- Falling Hearts Script -->
+  <script>
+     function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('falling-heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 50);
+
+    const music = document.getElementById("bg-music");
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTime = localStorage.getItem("musicTime");
+      if (savedTime) music.currentTime = parseFloat(savedTime);
+      music.play().then(() => { music.muted = false; }).catch(() => {
+        document.addEventListener("click", () => {
+          music.muted = false;
+          music.play();
+        }, { once: true });
+      });
+    });
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("musicTime", music.currentTime);
+    });
+  </script>
+
+</body>
+</html>
